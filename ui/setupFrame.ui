@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>setupFrame</class>
+ <widget class="QWidget" name="setupFrame">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>setup</string>
+  </property>
+  <widget class="QPushButton" name="btnSaveToDefault">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>10</y>
+     <width>150</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Save setup
+to default</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnLoadDefault">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>10</y>
+     <width>150</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Load
+default</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReturn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>10</y>
+     <width>150</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Return</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSetup">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>15</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>System
+Setup</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="Line" name="lineHTop">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>80</y>
+     <width>800</width>
+     <height>3</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="lineVTop">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>0</y>
+     <width>3</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>531</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox1{
+border: 1px solid;
+border-color: rgb(140, 140, 140);}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="labelDownload">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Download port:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbPortSelect">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="currentText">
+     <string> USB_HIDx/SN:xxxx-xxxx-xxxx</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> USB_HIDx/SN:xxxx-xxxx-xxxx</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> COMx/SN:xxxx-xxxx-xxxx</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="btnRefreshPort">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>531</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox2{
+border: 1px solid;
+border-color: rgb(140, 140, 140);}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="labelPower">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Power voltage:            V</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckbPowerEnable">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Power output enable</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editVoltage">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>40</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maxLength">
+     <number>4</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVoltage">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>491</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="minimum">
+     <number>70</number>
+    </property>
+    <property name="maximum">
+     <number>165</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBelow</enum>
+    </property>
+    <property name="tickInterval">
+     <number>5</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVoltageTick">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>90</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>7.0    8.0    9.0    10.0   11.0   12.0    13.0   14.0   15.0   16.0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>531</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox3{
+border: 1px solid;
+border-color: rgb(140, 140, 140);}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="labelLDFfile1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>LDF file:</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckbLinEnable1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> LIN bus CH1 enable     Baudrate:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbBaudrate1">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string> 10417</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> 10417</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 19200</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cbLDFfilePath1">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>371</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLoadLDF1">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>37</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>•••</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>350</y>
+     <width>531</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox4{
+border: 1px solid;
+border-color: rgb(140, 140, 140);}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QCheckBox" name="ckbPWMEnable1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>511</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> PWM CH1 output enable          PWM frequency:            Hz</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbPWMfreqency1">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string> 100</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="minimumContentsLength">
+     <number>1</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> 100</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 200</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 300</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 500</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>531</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox5{
+border: 1px solid;
+border-color: rgb(140, 140, 140);}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QCheckBox" name="ckbPWMEnable2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>511</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> PWM CH2 output enable          PWM frequency:            Hz</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbPWMfreqency2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>160</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string> 100</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="minimumContentsLength">
+     <number>1</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> 100</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 200</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 300</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 500</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="labelPin5Mode">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select PIN5 Mode</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLoadLDF2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>90</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>•••</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbBaudrate2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>60</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string> 10417</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> 10417</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> 19200</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="ckbLinEnable2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> LIN bus CH2 enable     Baudrate:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLDFfile2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>LDF file:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbLDFfilePath2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>371</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbLinCh2Sel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>35</y>
+      <width>115</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LIN CH2</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="rbPWMCh2Sel">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>135</y>
+      <width>115</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PWM CH2</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>125</y>
+      <width>531</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="labelGuide">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>140</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Aharoni</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Wiring Guide</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPinsImg">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>190</y>
+     <width>151</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources/allFrames.qrc">:/setupFrame/pins.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin1">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>220</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DUTV+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>265</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>LIN1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin3">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>310</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>DUTV-</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin4">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>355</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>PWM1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin5">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>400</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>LIN2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin6">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>440</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>CANH</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPin7">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>480</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>CANL</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../resources/allFrames.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnReturn</sender>
+   <signal>clicked()</signal>
+   <receiver>setupFrame</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderVoltage</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>changeVoltageDisplay(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>404</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ckbPowerEnable</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>powerOutput(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editVoltage</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>voltageEditing(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbLinCh2Sel</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>changePin5(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSaveToDefault</sender>
+   <signal>clicked()</signal>
+   <receiver>setupFrame</receiver>
+   <slot>saveDefaultConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLoadDefault</sender>
+   <signal>clicked()</signal>
+   <receiver>setupFrame</receiver>
+   <slot>loadDefaultConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>572</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbPWMfreqency1</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>PWM1_freqEditing(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbPWMfreqency2</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>PWM2_freqEditing(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>566</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>588</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ckbPWMEnable1</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>PWM1_output(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>27</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>43</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ckbPWMEnable2</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>setupFrame</receiver>
+   <slot>PWM2_output(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLoadLDF1</sender>
+   <signal>clicked()</signal>
+   <receiver>setupFrame</receiver>
+   <slot>displayLDF_fileName1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>317</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>314</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLoadLDF2</sender>
+   <signal>clicked()</signal>
+   <receiver>setupFrame</receiver>
+   <slot>displayLDF_fileName2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>503</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>changeVoltageDisplay(int)</slot>
+  <slot>powerOutput(bool)</slot>
+  <slot>voltageEditing(QString)</slot>
+  <slot>changePin5(bool)</slot>
+  <slot>saveDefaultConfig()</slot>
+  <slot>loadDefaultConfig()</slot>
+  <slot>PWM1_freqEditing(QString)</slot>
+  <slot>PWM2_freqEditing(QString)</slot>
+  <slot>PWM1_output(bool)</slot>
+  <slot>PWM2_output(bool)</slot>
+  <slot>displayLDF_fileName1()</slot>
+  <slot>displayLDF_fileName2()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>

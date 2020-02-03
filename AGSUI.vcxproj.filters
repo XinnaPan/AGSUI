@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Frame Files">
+      <UniqueIdentifier>{001ddff1-dc46-4d18-875f-1011f21ff5e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{322e4eaf-25c7-4b14-bdca-fb072a71c695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Thread Files">
+      <UniqueIdentifier>{25490e2e-a8a0-4386-b2be-07fd8b8cfab1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\mainFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\setupFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\programFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\reviewFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\controlFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\diagnosisFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\autoTestFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources\allFrames.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="frames\mainFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\programFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\setupFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\DUTinfoValidator.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Settings.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\reviewFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ReviewFileParser.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\controlFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="threads\RunAGM.cpp">
+      <Filter>Thread Files</Filter>
+    </ClCompile>
+    <ClCompile Include="threads\DownloadFw.cpp">
+      <Filter>Thread Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\diagnosisFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\autoTestFrame.cpp">
+      <Filter>Frame Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\AtsManager.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="frames\mainFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\programFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\setupFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\reviewFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\controlFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="threads\RunAGM.h">
+      <Filter>Thread Files</Filter>
+    </QtMoc>
+    <QtMoc Include="threads\DownloadFw.h">
+      <Filter>Thread Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\diagnosisFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frames\autoTestFrame.h">
+      <Filter>Frame Files</Filter>
+    </QtMoc>
+    <QtMoc Include="utils\AtsManager.h">
+      <Filter>Utils</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\DUTinfoValidator.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Settings.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ReviewFileParser.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="mainFrame">
+    <file>CompLogo.png</file>
+  </qresource>
+  <qresource prefix="controlFrame">
+    <file>dark_green.png</file>
+    <file>dark_red.png</file>
+    <file>light_green.png</file>
+    <file>light_red.png</file>
+  </qresource>
+  <qresource prefix="programFrame">
+    <file>exclamation.png</file>
+    <file>yes.png</file>
+    <file>connected.png</file>
+    <file>disconnected.png</file>
+  </qresource>
+  <qresource prefix="setupFrame">
+    <file>pins.png</file>
+  </qresource>
+</RCC>

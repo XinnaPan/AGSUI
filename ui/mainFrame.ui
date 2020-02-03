@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainFrameWindow</class>
+ <widget class="QMainWindow" name="mainFrameWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Test tool</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnSetup">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>190</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>设置 Setup</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnProgram">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>190</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>编程 Program</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAutotest">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>190</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>自动测试
+AutoTest</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnControl">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>340</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>控制 Control</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDiagnosis">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>340</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>诊断 Diagnosis</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>340</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>退出 Exit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHelp">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>30</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>帮助 Help</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>AGS Test Utility Version 1.0</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>800</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLogo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/allFrames.qrc">:/mainFrame/CompLogo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>btnSetup</tabstop>
+  <tabstop>btnProgram</tabstop>
+  <tabstop>btnAutotest</tabstop>
+  <tabstop>btnControl</tabstop>
+  <tabstop>btnDiagnosis</tabstop>
+  <tabstop>btnExit</tabstop>
+  <tabstop>btnHelp</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources/allFrames.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnExit</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>565</x>
+     <y>402</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSetup</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>showSetupFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnProgram</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>showProgramFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnControl</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>showControlFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDiagnosis</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>showDiagnosisFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAutotest</sender>
+   <signal>clicked()</signal>
+   <receiver>mainFrameWindow</receiver>
+   <slot>showAutoTestFrame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>552</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>566</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showSetupFrame()</slot>
+  <slot>showProgramFrame()</slot>
+  <slot>showControlFrame()</slot>
+  <slot>showDiagnosisFrame()</slot>
+  <slot>showAutoTestFrame()</slot>
+ </slots>
+</ui>
